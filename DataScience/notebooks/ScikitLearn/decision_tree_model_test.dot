@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Income <= 2200.0\ngini = 0.785\nsamples = 20\nvalue = [2, 7, 3, 2, 4, 2]\nclass = car", fillcolor="#edfada"] ;
+1 [label="Age <= 38.0\ngini = 0.72\nsamples = 10\nvalue = [2, 0, 0, 2, 4, 2]\nclass = scooter", fillcolor="#e0cef8"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Age <= 18.0\ngini = 0.625\nsamples = 8\nvalue = [2, 0, 0, 2, 4, 0]\nclass = scooter", fillcolor="#d5bdf6"] ;
+1 -> 2 ;
+3 [label="Age <= 12.0\ngini = 0.64\nsamples = 5\nvalue = [2, 0, 0, 2, 1, 0]\nclass = bicycle", fillcolor="#ffffff"] ;
+2 -> 3 ;
+4 [label="Gender <= 0.5\ngini = 0.444\nsamples = 3\nvalue = [2, 0, 0, 0, 1, 0]\nclass = bicycle", fillcolor="#f2c09c"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0, 0, 0, 0, 0]\nclass = bicycle", fillcolor="#e58139"] ;
+4 -> 5 ;
+6 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 0, 0, 1, 0]\nclass = scooter", fillcolor="#8139e5"] ;
+4 -> 6 ;
+7 [label="gini = 0.0\nsamples = 2\nvalue = [0, 0, 0, 2, 0, 0]\nclass = metro", fillcolor="#399de5"] ;
+3 -> 7 ;
+8 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 0, 0, 3, 0]\nclass = scooter", fillcolor="#8139e5"] ;
+2 -> 8 ;
+9 [label="gini = 0.0\nsamples = 2\nvalue = [0, 0, 0, 0, 0, 2]\nclass = taxi", fillcolor="#e5399d"] ;
+1 -> 9 ;
+10 [label="Age <= 63.5\ngini = 0.42\nsamples = 10\nvalue = [0, 7, 3, 0, 0, 0]\nclass = car", fillcolor="#c7f08e"] ;
+0 -> 10 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+11 [label="gini = 0.0\nsamples = 7\nvalue = [0, 7, 0, 0, 0, 0]\nclass = car", fillcolor="#9de539"] ;
+10 -> 11 ;
+12 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 3, 0, 0, 0]\nclass = helicopter", fillcolor="#39e581"] ;
+10 -> 12 ;
+}

@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Income <= 650.0\ngini = 0.78\nsamples = 20\nvalue = [2, 7, 3, 1, 4, 3]\nclass = car", fillcolor="#edfada"] ;
+1 [label="Income <= 100.0\ngini = 0.444\nsamples = 6\nvalue = [2, 0, 0, 0, 4, 0]\nclass = scooter", fillcolor="#c09cf2"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Gender <= 0.5\ngini = 0.444\nsamples = 3\nvalue = [2, 0, 0, 0, 1, 0]\nclass = bicycle", fillcolor="#f2c09c"] ;
+1 -> 2 ;
+3 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0, 0, 0, 0, 0]\nclass = bicycle", fillcolor="#e58139"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 0, 0, 1, 0]\nclass = scooter", fillcolor="#8139e5"] ;
+2 -> 4 ;
+5 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 0, 0, 3, 0]\nclass = scooter", fillcolor="#8139e5"] ;
+1 -> 5 ;
+6 [label="Income <= 14500.0\ngini = 0.653\nsamples = 14\nvalue = [0, 7, 3, 1, 0, 3]\nclass = car", fillcolor="#dbf6b7"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label="Income <= 3500.0\ngini = 0.512\nsamples = 11\nvalue = [0, 7, 0, 1, 0, 3]\nclass = car", fillcolor="#cef29c"] ;
+6 -> 7 ;
+8 [label="Age <= 36.0\ngini = 0.56\nsamples = 5\nvalue = [0, 1, 0, 1, 0, 3]\nclass = taxi", fillcolor="#f29cce"] ;
+7 -> 8 ;
+9 [label="Income <= 1900.0\ngini = 0.5\nsamples = 2\nvalue = [0, 1, 0, 1, 0, 0]\nclass = car", fillcolor="#ffffff"] ;
+8 -> 9 ;
+10 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 0, 1, 0, 0]\nclass = metro", fillcolor="#399de5"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1, 0, 0, 0, 0]\nclass = car", fillcolor="#9de539"] ;
+9 -> 11 ;
+12 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 0, 0, 0, 3]\nclass = taxi", fillcolor="#e5399d"] ;
+8 -> 12 ;
+13 [label="gini = 0.0\nsamples = 6\nvalue = [0, 6, 0, 0, 0, 0]\nclass = car", fillcolor="#9de539"] ;
+7 -> 13 ;
+14 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 3, 0, 0, 0]\nclass = helicopter", fillcolor="#39e581"] ;
+6 -> 14 ;
+}
